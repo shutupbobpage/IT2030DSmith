@@ -58,6 +58,11 @@ namespace EnrollmentApplication.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            else
+            {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);                
+            }
+           
 
             ViewBag.CourseID = new SelectList(db.Courses, "CourseId", "CourseTitle", enrollment.CourseID);
             ViewBag.StudentID = new SelectList(db.Students, "StudentId", "StudentLastName", enrollment.StudentID);
