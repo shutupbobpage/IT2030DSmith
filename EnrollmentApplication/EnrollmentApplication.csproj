@@ -145,6 +145,14 @@
     <Compile Include="Migrations\201910140150368_update2.Designer.cs">
       <DependentUpon>201910140150368_update2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910140250092_update3.cs" />
+    <Compile Include="Migrations\201910140250092_update3.Designer.cs">
+      <DependentUpon>201910140250092_update3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910140321278_update4.cs" />
+    <Compile Include="Migrations\201910140321278_update4.Designer.cs">
+      <DependentUpon>201910140321278_update4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\InvalidCharsAttribute.cs" />
     <Compile Include="Models\StudentData.cs" />
@@ -231,6 +239,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910140150368_update2.resx">
       <DependentUpon>201910140150368_update2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910140250092_update3.resx">
+      <DependentUpon>201910140250092_update3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910140321278_update4.resx">
+      <DependentUpon>201910140321278_update4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
