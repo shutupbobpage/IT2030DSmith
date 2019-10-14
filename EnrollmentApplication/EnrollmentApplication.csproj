@@ -133,6 +133,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910100123303_InitialCreate.cs" />
+    <Compile Include="Migrations\201910100123303_InitialCreate.Designer.cs">
+      <DependentUpon>201910100123303_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910140137177_update1.cs" />
+    <Compile Include="Migrations\201910140137177_update1.Designer.cs">
+      <DependentUpon>201910140137177_update1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910140150368_update2.cs" />
+    <Compile Include="Migrations\201910140150368_update2.Designer.cs">
+      <DependentUpon>201910140150368_update2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\InvalidCharsAttribute.cs" />
     <Compile Include="Models\StudentData.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Enrollment.cs" />
@@ -207,6 +221,17 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201910100123303_InitialCreate.resx">
+      <DependentUpon>201910100123303_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910140137177_update1.resx">
+      <DependentUpon>201910140137177_update1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910140150368_update2.resx">
+      <DependentUpon>201910140150368_update2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

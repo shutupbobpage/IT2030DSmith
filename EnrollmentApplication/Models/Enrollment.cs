@@ -33,6 +33,9 @@ namespace EnrollmentApplication.Models
         public virtual int EnrollmentYear { get; set; }
         public virtual Student Student { get; set; }
         public virtual Course Course { get; set; }
+
+        [InvalidCharsAttribute]
+        public virtual string Notes { get; set; }
         
 
     }

@@ -22,5 +22,7 @@ namespace EnrollmentApplication.Models
         [StringLength(50, ErrorMessage = "Exceeded maximum character length.(max = 50)")]
         [Display(Name = "Last Name")]
         public virtual string StudentFirstName { get; set; }
+
+        
     }
 }

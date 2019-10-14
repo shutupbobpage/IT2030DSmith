@@ -23,5 +23,7 @@ namespace EnrollmentApplication.Models
         [Display(Name = "Number of credits")]
         public virtual int CourseCredits { get; set; }
 
+        public virtual string InstructorName { get; set; }
+
     }
 }
