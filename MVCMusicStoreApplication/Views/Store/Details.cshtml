@@ -1,0 +1,35 @@
+﻿@model IEnumerable<MVCMusicStoreApplication.Models.Album>
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+            <p>
+            <p>
+        </td>
+        <td>
+            <img src=@Html.DisplayFor(modelItem => item.AlbumArtUrl)>
+            <p>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Artist.Name)
+            <p>
+        </td>
+        <td>
+            $@Html.DisplayFor(modelItem => item.Price)
+            <p>
+        </td>
+    </tr>
+
+    <div class="col-md-offset-2 col-md-10">
+        <input type="button" value="Add to Cart" onclick="location.href='@Url.Action("AddToCart", "ShoppingCart", new { id = item.AlbumId })'"/>
+    </div>
+
+}
+

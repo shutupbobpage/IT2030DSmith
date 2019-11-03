@@ -24,12 +24,14 @@
             @Html.DisplayNameFor(model => model.Price)
         </th>
         <th>
-            <img src=@Html.DisplayNameFor(model => model.AlbumArtUrl)>
+            @Html.DisplayNameFor(model => model.AlbumArtUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CountryOfOrigin)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.InStock)
         </th>
-        <th>@Html.DisplayNameFor(model  => model.CountryOfOrigin)</th>
         <th></th>
     </tr>
 
@@ -51,10 +53,10 @@
             @Html.DisplayFor(modelItem => item.AlbumArtUrl)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.InStock)
+            @Html.DisplayFor(modelItem => item.CountryOfOrigin)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.CountryOfOrigin)
+            @Html.DisplayFor(modelItem => item.InStock)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.AlbumId }) |
