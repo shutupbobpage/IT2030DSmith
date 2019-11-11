@@ -54,9 +54,9 @@ namespace MVCMusicStoreApplication.Controllers
         }
 
         // GET: ShoppingCart/AddToCart
-        public ActionResult AddToCart(int id)
-        {
-            return null;
-        }
+        //public ActionResult AddToCart(int id)
+        //{
+           // return null;
+        //}
     }
 }
