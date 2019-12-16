@@ -1,0 +1,94 @@
+﻿@model EventStore.Models.Event
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Event</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EventName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EventDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EventType.TypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventType.TypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EventStart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventStart)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EventEnd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventEnd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxTickets)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxTickets)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AvailableTickets)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AvailableTickets)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+    </dl>
+    <div class="col-md-offset-2 col-md-10">
+        <input type="button" value="Register for Event" onclick="location.href='@Url.Action("AddToCart", "ShoppingCart", new { id = Model.EventId})'" />
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Back to Home", "Index")
+</p>

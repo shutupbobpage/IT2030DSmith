@@ -12,7 +12,7 @@ namespace MVCMusicStoreApplication.Controllers
 {
     public class GenreController : Controller
     {
-        private MVCMusicStoreDB db = new MVCMusicStoreDB();
+        private MVCMusicStoreApplicationDB db = new MVCMusicStoreApplicationDB();
 
         // GET: Genre
         public ActionResult Index()

@@ -13,7 +13,7 @@ namespace MVCMusicStoreApplication.Controllers
     public class StoreManagerController : Controller
     {
 
-        private MVCMusicStoreDB db = new MVCMusicStoreDB();
+        private MVCMusicStoreApplicationDB db = new MVCMusicStoreApplicationDB();
 
 
         // GET: StoreManager

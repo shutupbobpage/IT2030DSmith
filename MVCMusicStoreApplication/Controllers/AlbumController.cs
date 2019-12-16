@@ -12,7 +12,7 @@ namespace MVCMusicStoreApplication.Controllers
 {
     public class AlbumController : Controller
     {
-        private MVCMusicStoreDB db = new MVCMusicStoreDB();
+        private MVCMusicStoreApplicationDB db = new MVCMusicStoreApplicationDB();
 
         // GET: Album
         public ActionResult Index()

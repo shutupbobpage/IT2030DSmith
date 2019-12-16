@@ -1,0 +1,52 @@
+﻿@model IEnumerable<EventStore.Models.Event>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>EVENT STORE</h1>
+    <p class="lead">This is a web application that can create events and order tickets to those events.</p>
+    <p><a href="https://www.tri-c.edu" class="btn btn-primary btn-lg">Back to school &raquo;</a></p>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Event Search (leave blank to search for all)</div>
+    <div class="panel-body">
+        @using (Ajax.BeginForm("EventSearch", "Home", new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "GET",
+            OnFailure = "searchFailedEvents",
+            LoadingElementId = "ajaxloading",
+            UpdateTargetId = "searchresults"
+        }))
+        {
+            <input type="text" name="q" placeholder="Event or Event Type" />
+            <input type="text" name="p" placeholder="Location" />
+            <input type="submit" value="search" />
+            <img id="ajaxloading"
+                 src="@Url.Content("~/Content/Images/ajax-loader.gif")"
+                 style="display:none" />
+        }
+        <div id="searchresults"></div>
+    </div>
+</div>
+
+<div id="lastminutedeals">
+    @Ajax.ActionLink("Click here to see Last Minute Deals!", "LastMinuteDeals",
+    null,
+    new AjaxOptions
+    {
+        UpdateTargetId = "lastminutedeals",
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "GET"
+    },
+    new { @class = "btn btn-primary" })
+</div>
+
+
+@section Scripts {
+    <script src="~/Scripts/Apps/eventstorescripts.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+}

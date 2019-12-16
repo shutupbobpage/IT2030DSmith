@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MVCMusicStoreApplication.Models
 {
-    public class MVCMusicStoreDB : DbContext
+    public class MVCMusicStoreApplicationDB : DbContext
     {
         // You can add custom code to this file. Changes will not be overwritten.
         // 
@@ -15,7 +15,7 @@ namespace MVCMusicStoreApplication.Models
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
     
-        public MVCMusicStoreDB() : base("name=MVCMusicStoreDB")
+        public MVCMusicStoreApplicationDB() : base("name=MVCMusicStoreDB")
         {
         }
 

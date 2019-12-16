@@ -9,7 +9,7 @@ namespace MVCMusicStoreApplication.Controllers
 {
     public class ShoppingCartController : Controller
     {
-        MVCMusicStoreDB db = new MVCMusicStoreDB();
+        MVCMusicStoreApplicationDB db = new MVCMusicStoreApplicationDB();
 
         // GET: ShoppingCart
         public ActionResult Index()

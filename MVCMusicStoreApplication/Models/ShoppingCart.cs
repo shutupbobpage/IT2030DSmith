@@ -8,7 +8,7 @@ namespace MVCMusicStoreApplication.Models
     public class ShoppingCart
     {
         public string ShoppingCartId;
-        private MVCMusicStoreDB db = new MVCMusicStoreDB();
+        private MVCMusicStoreApplicationDB db = new MVCMusicStoreApplicationDB();
 
         public static ShoppingCart GetCart(HttpContextBase context)
         {
