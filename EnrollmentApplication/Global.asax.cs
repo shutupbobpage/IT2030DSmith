@@ -15,7 +15,7 @@ namespace EnrollmentApplication
     {
         protected void Application_Start()
         {
-            //Database.SetInitializer(new StudentData());
+            Database.SetInitializer(new StudentData());
 
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

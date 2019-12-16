@@ -12,7 +12,7 @@ namespace EnrollmentApplication.Models
         {
             var students = new List<Student>
             {
-                new Student { StudentId = 1, StudentFirstName = "Jack", StudentLastName = "Burton"},
+                new Student { StudentId = 1, StudentFirstName = "Jack", StudentLastName = "Burton", Address1 = "test", Address2 = "test2", City = "San Francisco", State = "CA", Zipcode = "11111"}
                 //new Student { StudentId = 2, StudentFirstName = "Ellen", StudentLastName = "Ripley"},
                 //new Student { StudentId = 3, StudentFirstName = "Dennis", StudentLastName = "Quaid"},
                 //new Student { StudentId = 4, StudentFirstName = "Biff", StudentLastName = "Tannen"},

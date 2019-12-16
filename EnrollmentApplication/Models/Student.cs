@@ -25,8 +25,11 @@ namespace EnrollmentApplication.Models
 
         public string Address1 { get; set; }
         public string Address2 { get; set; }
+
         public string City { get; set; }
+
         public string Zipcode { get; set; }
+  
         public string State { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
@@ -36,21 +39,22 @@ namespace EnrollmentApplication.Models
 
             if(Address1 == Address2)
             {
-                yield return (new ValidationResult("Address2 cannot be the same as Address1."));
+               
+                yield return (new ValidationResult("Address 1 and Address 2 cannot be identical.", new[] { "Address1" }));
             }
 
             //Validation 2 "State must be two digits":
 
             if(State.Length != 2)
             {
-                yield return (new ValidationResult("Enter a 2 digit State code."));
+                yield return (new ValidationResult("Enter a 2 digit State code.", new[] { "State" }));
             }
 
             //Validation 3  "Zipcode must be 5 digits":
 
             if (Zipcode.Length != 5)
             {
-                yield return (new ValidationResult("Enter a 5 digit Zipcode."));
+                yield return (new ValidationResult("Enter a 5 digit Zipcode.", new[] { "Zipcode" }));
             }
 
             //throw new NotImplementedException();
